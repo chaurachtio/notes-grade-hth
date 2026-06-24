@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>华体会内容索引 · 资料整理说明页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f2f4f6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e2a3a;
+      padding: 2rem 1.5rem;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    /* hero */
+    .hero {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 3rem 2.5rem 2.8rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.04);
+      border: 1px solid #e7eaee;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #0a1a2f;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero .subhead {
+      font-size: 1.1rem;
+      color: #4a5a6e;
+      max-width: 640px;
+      margin-bottom: 1.6rem;
+      border-left: 4px solid #b6c4d4;
+      padding-left: 1.2rem;
+    }
+
+    .hero p {
+      color: #374151;
+      max-width: 720px;
+    }
+
+    /* 卡片通用 */
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.8rem 2rem;
+      border: 1px solid #e3e8ef;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+      flex: 1 1 280px;
+      transition: box-shadow 0.15s;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 550;
+      color: #1f2a3c;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.02em;
+      border-bottom: 2px solid #edf1f6;
+      padding-bottom: 0.5rem;
+    }
+
+    .card ul, .card p {
+      font-size: 0.95rem;
+      color: #2e3b4d;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card li {
+      padding: 0.25rem 0;
+      position: relative;
+      padding-left: 1.1rem;
+    }
+
+    .card li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #8d9db0;
+    }
+
+    /* 说明区（长文本） */
+    .detail-section {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2rem 2.5rem;
+      border: 1px solid #e3e8ef;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+      margin-bottom: 2.5rem;
+    }
+
+    .detail-section h2 {
+      font-size: 1.6rem;
+      font-weight: 480;
+      color: #0e1d30;
+      margin-bottom: 1.2rem;
+    }
+
+    .detail-section p {
+      margin-bottom: 1rem;
+      color: #2c3a4c;
+    }
+
+    .detail-section .note {
+      background: #f5f8fc;
+      border-radius: 14px;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid #b0c2d4;
+      font-size: 0.95rem;
+      color: #2f4055;
+      margin-top: 1.6rem;
+    }
+
+    /* FAQ 摘要 */
+    .faq-block {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.8rem 2.5rem;
+      border: 1px solid #e3e8ef;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+      margin-bottom: 2.5rem;
+    }
+
+    .faq-block h2 {
+      font-size: 1.5rem;
+      font-weight: 470;
+      color: #0e1d30;
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 550;
+      color: #19283d;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-a {
+      color: #3b4c62;
+      font-size: 0.95rem;
+    }
+
+    /* 底部链接 */
+    .footer-links {
+      text-align: center;
+      padding: 1.6rem 0 0.2rem;
+      border-top: 1px solid #dbe0e8;
+      color: #57687c;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a {
+      color: #1d3e63;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 450;
+    }
+
+    .footer-links a:hover {
+      color: #0b1f33;
+    }
+
+    .footer-links .sep {
+      margin: 0 0.75rem;
+      color: #bcc8d6;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e1e7ef;
+      margin: 0.5rem 0 1.8rem;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 1.2rem 1rem; }
+      .hero { padding: 2rem 1.5rem; }
+      .hero h1 { font-size: 1.9rem; }
+      .card-grid { gap: 1rem; }
+      .card { padding: 1.3rem 1.2rem; }
+      .detail-section { padding: 1.5rem 1.2rem; }
+      .faq-block { padding: 1.3rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero -->
+  <section class="hero">
+    <h1>华体会 · 内容索引与资料整理</h1>
+    <div class="subhead">以信息梳理的角度，呈现与华体会相关的知识条目、使用场景与常见问题摘要</div>
+    <p>本页是对 <a href="https://grade-hth.com.cn" style="color:#1d3e63;text-decoration:underline;text-underline-offset:3px;">华体会</a> 相关公开信息所做的整合性说明，旨在帮助有查阅需要的用户快速了解其架构、适用方向与基础规则。以下内容均来源于可获取的资料整理，供参考对照。</p>
+  </section>
+
+  <!-- 优势区 / 特点卡片 -->
+  <div class="card-grid">
+    <div class="card">
+      <h3>信息结构特点</h3>
+      <ul>
+        <li>分类索引清晰，层级明确</li>
+        <li>条目附有简要注释</li>
+        <li>支持多维度筛选</li>
+        <li>更新频率稳定</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>常见使用场景</h3>
+      <ul>
+        <li>内容检索与对比</li>
+        <li>资料归档整理</li>
+        <li>条目查询与引用</li>
+        <li>学习路径参考</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>索引覆盖方向</h3>
+      <ul>
+        <li>通用说明与分类</li>
+        <li>功能模块概览</li>
+        <li>操作流程摘要</li>
+        <li>相关辅助资料</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 说明区：较详细的内容介绍 -->
+  <section class="detail-section">
+    <h2>资料整理与索引说明</h2>
+    <p>本索引基于公开可用的信息进行归类，聚焦于 <a href="https://grade-hth.com.cn" style="color:#1d3e63;text-decoration:underline;text-underline-offset:3px;">华体会</a> 所涉及的内容模块、常用概念以及条目之间的关联。整理时尽可能保持条目表述的原意，同时补充了简要的上下文说明，以减少歧义。</p>
+    <p>索引结构分为三个层级：大类目、子条目以及附加标签。大类目按照主题领域划分，子条目列出核心关键词或常用说法，附加标签则用于标记版本、适用阶段或注意事项。这种设计便于快速定位，也适合作为进一步查阅的起点。</p>
+    <p>在整理过程中，对部分术语做了合并或拆分处理，并在条目下方注明参考来源或相关条目链接。如果遇到表述不一致的情况，以较晚更新的公开说明为准。本索引不包含任何非公开或推测性内容。</p>
+    <div class="note">
+      ⚡ 提示：若需要更详细的单项说明，建议直接使用站内搜索功能或查阅对应分类下的完整条目。索引本身只提供摘要式指引，不替代原始说明。
+    </div>
+  </section>
+
+  <!-- FAQ 摘要 -->
+  <section class="faq-block">
+    <h2>常见问题摘要（FAQ）</h2>
+    <div class="faq-item">
+      <div class="faq-q">Q1：索引中的条目是否覆盖了所有内容？</div>
+      <div class="faq-a">A：索引覆盖了主要公开分类，但并非穷尽。部分细分条目可能因篇幅未列入，建议结合具体页面查看。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q2：条目之间的关联标记如何使用？</div>
+      <div class="faq-a">A：关联标记以“参见”形式列出，指向索引中其他条目或外部参考页面。标记仅为辅助，不影响条目本身的独立性。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q3：如果发现索引与页面内容不一致，该怎么办？</div>
+      <div class="faq-a">A：请以实际页面内容为准。索引基于特定时间点的公开信息整理，可能存在延迟或疏漏。欢迎反馈以便修正。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q4：是否有计划增加更多分类或标签？</div>
+      <div class="faq-a">A：索引会随内容更新而调整，新分类或标签会在下次整理时纳入，保持与公开信息同步。</div>
+    </div>
+  </section>
+
+  <!-- 底部链接 -->
+  <div class="footer-links">
+    <span>更多内容请参阅</span>
+    <a href="https://grade-hth.com.cn">华体会</a>
+    <span class="sep">·</span>
+    <span style="color:#5b6f86;">索引版本 2025.04</span>
+    <span class="sep">·</span>
+    <span style="color:#6b7e94;">基于公开资料整理</span>
+  </div>
+
+  <hr>
+  <p style="text-align:center; font-size:0.85rem; color:#7a8b9e; margin-top:-0.6rem;">本页为信息索引说明页，不构成任何指导或承诺。所有表述均以原出处为准。</p>
+
+</div>
+</body>
+</html>
