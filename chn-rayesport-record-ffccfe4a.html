@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于雷竞技 · 站点介绍与可信说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+      background: #f7f8fa;
+      color: #2c2f33;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* 深色头图 hero */
+    .hero {
+      background: linear-gradient(135deg, #0b1a2e 0%, #1a2f44 60%, #0c1e2f 100%);
+      color: #e6edf3;
+      padding: 3.5rem 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #b4a582, #d4c5a0, #b4a582);
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .subhead {
+      font-size: 1rem;
+      color: #a6b8d0;
+      max-width: 640px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    /* 章节卡片化，浅色正文区 */
+    .section {
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      padding: 2rem 2.2rem;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.15s;
+    }
+
+    .section:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #1f2937;
+      border-left: 4px solid #b4a582;
+      padding-left: 0.9rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .section p {
+      margin-bottom: 1.1rem;
+      text-align: justify;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 引用提示块 */
+    .hint-box {
+      background: #f1f5f9;
+      border-left: 5px solid #b4a582;
+      padding: 1.2rem 1.6rem;
+      border-radius: 6px;
+      margin: 1.6rem 0;
+      font-size: 0.95rem;
+      color: #2d3748;
+    }
+
+    .hint-box strong {
+      color: #1f384e;
+    }
+
+    /* 链接强调色 */
+    a {
+      color: #a9793e;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+      font-weight: 500;
+    }
+
+    a:hover {
+      color: #7a5b2b;
+      border-bottom-color: #b4a582;
+    }
+
+    /* 特点列表（极简） */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.8rem 0 0.2rem;
+    }
+
+    .feature-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #edf2f7;
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+    }
+
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+
+    .feature-list li::before {
+      content: "·";
+      color: #b4a582;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    /* 访问句 */
+    .visit-note {
+      background: #faf7f0;
+      border-radius: 12px;
+      padding: 1.8rem 2rem;
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 1rem;
+      border: 1px solid #e5ddd0;
+      color: #2f3b4a;
+    }
+
+    .visit-note a {
+      font-weight: 600;
+    }
+
+    /* FAQ 摘要 */
+    .faq-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #1f2937;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-a {
+      color: #4a5568;
+      font-size: 0.95rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 1.6rem 0;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .section {
+        padding: 1.5rem 1.2rem;
+      }
+      .container {
+        padding: 1.5rem 1rem;
+      }
+      .visit-note {
+        padding: 1.2rem 1rem;
+      }
+      .hint-box {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      body {
+        font-size: 15px;
+      }
+      .hero {
+        padding: 2.5rem 1rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图 -->
+  <header class="hero">
+    <h1>关于雷竞技</h1>
+    <p class="subhead">一份来自站点介绍与可信说明的温和叙述 —— 由内而外，坦诚如常。</p>
+  </header>
+
+  <main class="container">
+    <!-- 开篇：站点介绍 -->
+    <div class="section">
+      <h2 class="section-title">为什么会有这个站点</h2>
+      <p>
+        在信息繁杂的网络中，一个清晰、平实的介绍往往比夸大的承诺更有价值。<a href="https://chn-rayesport.com">雷竞技</a> 自建立以来，始终保持着对内容真实性的坚持。我们整理这份页面，不是为了包装，而是希望每一位留意到这里的你，能够快速理解这个站点的定位、背景以及它所围绕的核心——竞技与信息呈现。
+      </p>
+      <p>
+        这里没有夸张的标语，也没有诱导性的措辞。你即将看到的文字，都经过基本的核实与梳理，旨在还原一个站点本来的面貌：一个关注竞技领域、提供相关资讯与服务的平台。
+      </p>
+      <div class="hint-box">
+        <strong>一点提醒</strong> —— 任何网站都值得你带着自己的判断去探索。下面列出的要点，或许能帮助你更高效地了解 <a href="https://chn-rayesport.com">雷竞技</a> 的轮廓。
+      </div>
+    </div>
+
+    <!-- 可信说明 + 特点 -->
+    <div class="section">
+      <h2 class="section-title">可信说明 · 我们关注的部分</h2>
+      <p>
+        对于一个竞技类站点，用户最关心的往往是信息的可靠性、更新频率以及服务的透明度。从这几个角度出发，我们梳理了以下基础特征，它们构成了站点可信度的主要支撑：
+      </p>
+      <ul class="feature-list">
+        <li><strong>内容方向明确</strong> —— 站点围绕竞技赛事、选手动态、数据参考等主题展开，不混入无关领域。</li>
+        <li><strong>信息呈现克制</strong> —— 不采用诱导分享、虚假倒计时或模糊表述，所有可见数据均有明确来源或标注。</li>
+        <li><strong>界面持续优化</strong> —— 从用户阅读体验出发，版式、配色与响应式细节会随反馈不断调整。</li>
+        <li><strong>联系方式可查</strong> —— 站内提供基础联络渠道，便于用户反馈问题或提出建议。</li>
+      </ul>
+      <p style="margin-top: 1rem;">
+        当然，以上只是部分维度。如果你希望亲自验证，可以直接访问 <a href="https://chn-rayesport.com">雷竞技</a>，通过自己的浏览来感受站点的实际氛围。
+      </p>
+    </div>
+
+    <!-- 场景与氛围描述 -->
+    <div class="section">
+      <h2 class="section-title">适合怎样的浏览场景</h2>
+      <p>
+        很多用户习惯在碎片时间里快速获取竞技资讯，也有人喜欢在比赛结束后仔细回顾数据与复盘。无论你是哪一种，<a href="https://chn-rayesport.com">雷竞技</a> 的页面结构都倾向于减少干扰——干净的白底、适中的行距、克制的色彩点缀，让注意力更容易集中在你关心的内容上。
+      </p>
+      <p>
+        除了桌面端，移动端的浏览体验也经过专门调整。无论使用手机还是平板，页面都会自动适配，不会出现文字过小或布局错乱的情况。这一点对于经常在通勤路上或休息间隙浏览的用户来说，或许是一个贴心的细节。
+      </p>
+      <hr>
+      <p style="font-style: italic; color: #4b5563;">
+        顺便一提，站点的深色头图和浅色正文区并非仅仅为了视觉对比，更是希望营造一种「沉静开场，清晰阅读」的节奏。
+      </p>
+    </div>
+
+    <!-- FAQ 摘要（两个问与答） -->
+    <div class="section">
+      <h2 class="section-title">常见疑问 · 简要回应</h2>
+      <div class="faq-item">
+        <div class="faq-q">Q：这个站点是否收费？</div>
+        <div class="faq-a">目前站内绝大部分内容均可免费浏览。未来若有增值服务，会以显著且诚实的方式告知用户。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q：信息更新频率如何？</div>
+        <div class="faq-a">赛事密集期会保持每日更新，平日期维持合理节奏。所有时间戳均真实标注。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q：如何确认站点的安全性？</div>
+        <div class="faq-a">站点已部署 HTTPS 加密，且不包含任何可疑弹窗或自动下载文件的行为。你可以通过常规浏览器安全提示进行验证。</div>
+      </div>
+    </div>
+
+    <!-- 访问句 -->
+    <div class="visit-note">
+      <p>如果你愿意花几分钟亲自看一看，或许比任何描述都更直观。</p>
+      <p style="margin-top: 0.6rem;">
+        → <a href="https://chn-rayesport.com">雷竞技</a> ←
+      </p>
+      <p style="margin-top: 0.6rem; font-size: 0.9rem; color: #5f6b7a;">
+        无需注册，直接浏览。
+      </p>
+    </div>
+
+    <!-- 收尾温和句子 -->
+    <div style="text-align: center; padding: 1.2rem 0 0.5rem; color: #6b7280; font-size: 0.9rem;">
+      希望这份介绍对你有所帮助。
+    </div>
+  </main>
+
+</body>
+</html>
